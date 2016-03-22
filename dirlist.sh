@@ -19,6 +19,15 @@ echo "#### $location <ON> \
 
 ls $location >> $HOME/dir_list_log
 
+# exit, print 'error' message if no $location argument given
+# program continues to log contents of current working directory
+
+if [ -z "$location" ]
+  then
+  echo "ERROR: Please provide a directory location to index."
+  exit
+fi
+
 # create/append 'end of listing' message to dir_list_log
 
 echo ">>>> End of listing for $location. <<<<" >> $HOME/dir_list_log
