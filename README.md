@@ -1,11 +1,11 @@
 # dirlist
-dirlist is a simple bash script to output/append directory contents to a log with a timestamp.
+dirlist is a simple bash script to output and append directory contents to a log with a timestamp.
 
 #### Simply run `dirlist <directory>` after installing to a directory in your system $PATH.
 
 Uses `ls` to list all contents of a given directory, then writes/appends the output to file `dir_list_log` in the $HOME directory. dirlist also displays the contents at the same time using `ls -1`.
 
-If you forget to include a `<directory>` (`$location`), you will see an error message: "Please provide directory to index." NOTE: Currently, the program continues to log the current working directory by default. This will be bug will be addressed in future versions.
+If you forget to include a `<directory>` (`$location`), the program will exit with an error message: "ERROR: Please provide a directory location to index."
 
 ### dirlist log format example:
 
