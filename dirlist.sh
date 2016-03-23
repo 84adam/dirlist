@@ -5,6 +5,14 @@
 
 location=$1
 
+# exit, print 'error' message if no $location argument given
+
+if [ -z "$location" ]
+  then
+  echo "ERROR: Please provide a directory location to index."
+  exit
+fi
+
 # create/append header message to dir_list_log file in $HOME
 # include location given as argument
 # include time and date of directory content retrieval
@@ -18,15 +26,6 @@ echo "#### $location <ON> \
 # output/append listing to dir_list_log
 
 ls $location >> $HOME/dir_list_log
-
-# exit, print 'error' message if no $location argument given
-# program continues to log contents of current working directory
-
-if [ -z "$location" ]
-  then
-  echo "ERROR: Please provide a directory location to index."
-  exit
-fi
 
 # create/append 'end of listing' message to dir_list_log
 
